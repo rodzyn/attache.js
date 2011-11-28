@@ -1,0 +1,19 @@
+{
+  "author": "Marcin Olichwirowicz <olichwirowicz@gmail.com>",
+  "name": "attache.js",
+  "description": "AOP implementation in JavaScript",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rodzyn/attache.js.git"
+  },
+  "main": "attache.js",
+  "scripts": {
+    "test": "bash tests/run.sh"
+  },
+  "engines": {
+    "node": "~0.6.2"
+  },
+  "dependencies": {},
+  "devDependencies": { "asserts" : ">= 0.4.9"}
+}
