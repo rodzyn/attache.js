@@ -81,11 +81,11 @@ module.exports = (function () {
         //Overriding original function with passing proper function into new scope
         obj[funcName] = function(funcName) {
           return function(){
-            aspectObj.cloneAndExecute(obj.aspectContainer[funcName].before);
+            aspectObj.cloneAndExecute(obj.aspectContainer[funcName].before, obj, arguments);
             //Calling original function name and saving return value
             var originalReturn  = obj.origins[funcName].apply(obj, arguments);
     
-            aspectObj.cloneAndExecute(obj.aspectContainer[funcName].after);
+            aspectObj.cloneAndExecute(obj.aspectContainer[funcName].after, obj, arguments);
     
             return originalReturn;
           }
@@ -133,14 +133,11 @@ module.exports = (function () {
       this.add(obj, fnName, aspectFn, "before", true);
     },
   
-    cloneAndExecute: function(container) {
+    cloneAndExecute: function(container, obj, arguments) {
       var cloneCont = [];
       for (var i = 0; i < container.length; i++) {
         cloneCont[i] = container[i];
-      }
-    
-      for (var i = 0; i < cloneCont.length; i++) {
-        cloneCont[i]();
+        cloneCont[i].apply(obj, arguments);
       }
     }
   }
