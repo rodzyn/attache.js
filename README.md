@@ -32,7 +32,7 @@ Attache.js
 
 
 ### Example:
-	attache = require('./attache.js');
+	attache = require('attache.js');
 	
 	var obj = {
 	  test: function(x) { return x; }
