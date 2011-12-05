@@ -8,9 +8,14 @@ var obj = {
 
 var counter = 0;
 
-aspect.add(obj, ["foo", "bar"], function() { counter++; });
+aspect.before(obj, ["foo", "bar"], function() { counter = counter + 2; });
+aspect.after(obj, ["foo", "bar"], function() { counter--; });
 
 obj.foo();
 obj.bar();
 
 assert.equal(counter, 2);
+
+
+
+

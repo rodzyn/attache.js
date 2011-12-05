@@ -8,7 +8,7 @@ var obj = {
 
 var counter = 0;
 
-aspect.add(obj, /^fo(.*)$/, function() { counter++ })
+aspect.before(obj, /^fo(.*)$/, function() { counter++ })
 
 obj.foo();
 obj.foooo();

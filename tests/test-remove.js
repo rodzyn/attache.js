@@ -10,10 +10,10 @@ var obj = {
 
 var aspect_func = function(){ counter++; }
 
-aspect.add(obj, "sum", aspect_func, "before");
-aspect.add(obj, "sum", aspect_func, "after");
+aspect.before(obj, "sum", aspect_func);
+aspect.after(obj, "sum", aspect_func);
 obj.sum(2);
-aspect.remove(obj, "sum", aspect_func, "before");
+aspect.remove_before(obj, "sum", aspect_func);
 obj.sum(2);
 
 assert.equal(counter, 3, "should be executed 3 times");

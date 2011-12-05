@@ -2,7 +2,7 @@
   "author": "Marcin Olichwirowicz <olichwirowicz@gmail.com>",
   "name": "attache.js",
   "description": "AOP implementation in JavaScript",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:rodzyn/attache.js.git"

@@ -6,7 +6,7 @@ var obj = {
   sum : function(y) { return this.x + y; }
 };
 
-aspect.add(obj, "sum", function(){ obj.x += 1 }, "after", true);
+aspect.once_after(obj, "sum", function(){ obj.x += 1 });
 
 obj.sum(2);
 obj.sum(2);

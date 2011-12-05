@@ -18,12 +18,12 @@ assert.throws(function() {
   aspect.add("fake", "fake", function() { counter++; })
 }, TypeError, "Must throw an exception when call for non existing object"); 
 
-aspect.add(null, "global_function", function() { counter ++; });
+aspect.before(null, "global_function", function() { counter ++; });
 global_function();
 assert.equal(counter, 1, "global function should increase counter");
 
-aspect.add(obj, "test", function() { counter++; });
-aspect.add(obj, "sum", function() { counter++; });
+aspect.before(obj, "test", function() { counter++; });
+aspect.before(obj, "sum", function() { counter++; });
 
 obj.test();
 assert.equal(bool, true, "changed by aspect");
