@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/rodzyn/attache.js.png)](http://travis-ci.org/rodzyn/attache.js)
 Attache.js
 ==========
 ### Javascript implementation of Aspect Oriented Programming paradigm, enclosed in Node.js module
